@@ -11,7 +11,7 @@ PROJECT_NAME           = @PROJECT_NAME@
 PROJECT_NUMBER         = @PROJECT_VERSION@
 PROJECT_BRIEF          = "@PROJECT_BRIEF@"
 PROJECT_LOGO           = logo.png
-OUTPUT_DIRECTORY       = ../docs
+OUTPUT_DIRECTORY       = docs
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = English
 BRIEF_MEMBER_DESC      = YES
@@ -117,8 +117,8 @@ WARN_LOGFILE           =
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
 
-INPUT                  = ../src \
-                         ../README.md
+INPUT                  = @BASE_PATH@/src \
+                         @BASE_PATH@/README.md
 
 INPUT_ENCODING         = UTF-8
 
@@ -174,12 +174,12 @@ EXAMPLE_PATH           =
 EXAMPLE_PATTERNS       = *
 EXAMPLE_RECURSIVE      = NO
 
-IMAGE_PATH             = ../resources/
+IMAGE_PATH             = @BASE_PATH@/resources/
 INPUT_FILTER           = 
 FILTER_PATTERNS        = 
 FILTER_SOURCE_FILES    = NO
 FILTER_SOURCE_PATTERNS = 
-USE_MDFILE_AS_MAINPAGE = ../README.md
+USE_MDFILE_AS_MAINPAGE = @BASE_PATH@/README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -209,14 +209,14 @@ IGNORE_PREFIX          =
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
-HTML_HEADER            = "header.html"
-HTML_FOOTER            = "footer.html"
+HTML_HEADER            = "@BASE_PATH@/docbuilder/header.html"
+HTML_FOOTER            = "@BASE_PATH@/docbuilder/footer.html"
 HTML_STYLESHEET        = 
-HTML_EXTRA_STYLESHEET  = "customdoxygen.css"
-HTML_EXTRA_FILES       = "doxy-boot.js" \
-                         "jquery.smartmenus.js" \
-                         "jquery.smartmenus.bootstrap.js" \
-                         "jquery.smartmenus.bootstrap.css"
+HTML_EXTRA_STYLESHEET  = "@BASE_PATH@/docbuilder/customdoxygen.css"
+HTML_EXTRA_FILES       = "@BASE_PATH@/docbuilder/doxy-boot.js" \
+                         "@BASE_PATH@/docbuilder/jquery.smartmenus.js" \
+                         "@BASE_PATH@/docbuilder/jquery.smartmenus.bootstrap.js" \
+                         "@BASE_PATH@/docbuilder/jquery.smartmenus.bootstrap.css"
 
 HTML_COLORSTYLE_HUE    = 104
 HTML_COLORSTYLE_SAT    = 77

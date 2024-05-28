@@ -22,14 +22,14 @@ def get_nested_value(data, keys):
 
 def generate_doxyfile():
     # Load the library.json file
-    with open('../library.json', 'r') as lib_file:
+    with open('library.json', 'r') as lib_file:
         data = json.load(lib_file)
 
-    with open('../doxygen.json', 'r') as doxygen_file:
+    with open('doxygen.json', 'r') as doxygen_file:
         doxygen_data = json.load(doxygen_file)
 
     # Read the Doxyfile.in template
-    with open('Doxyfile.in', 'r') as template_file:
+    with open('docbuilder/Doxyfile.in', 'r') as template_file:
         doxyfile_content = template_file.read()
 
     for var, json_path in lib_var_map.items():
@@ -42,7 +42,7 @@ def generate_doxyfile():
         placeholder = f'@{var}@'
         doxyfile_content = doxyfile_content.replace(placeholder, value)
 
-    doxyfile_content.replace("@BASE_PATH@", os.path.abspath(os.path.join(os.getcwd(), os.pardir)))
+    doxyfile_content.replace("@BASE_PATH@", os.path.abspath(os.getcwd()))
 
     # Write the generated Doxyfile
     with open('Doxyfile', 'w') as doxyfile:
