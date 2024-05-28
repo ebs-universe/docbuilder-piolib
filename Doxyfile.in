@@ -209,15 +209,14 @@ IGNORE_PREFIX          =
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
-HTML_HEADER            = "@BASE_PATH@/docbuilder/header.html"
-HTML_FOOTER            = "@BASE_PATH@/docbuilder/footer.html"
+HTML_HEADER            = 
+HTML_FOOTER            = 
 HTML_STYLESHEET        = 
-HTML_EXTRA_STYLESHEET  = "@BASE_PATH@/docbuilder/customdoxygen.css"
-HTML_EXTRA_FILES       = "@BASE_PATH@/docbuilder/doxy-boot.js" \
-                         "@BASE_PATH@/docbuilder/jquery.smartmenus.js" \
-                         "@BASE_PATH@/docbuilder/jquery.smartmenus.bootstrap.js" \
-                         "@BASE_PATH@/docbuilder/jquery.smartmenus.bootstrap.css"
+HTML_EXTRA_STYLESHEET  = "@BASE_PATH@/docbuilder/doxygen-awesome.css"
+HTML_EXTRA_FILES       = 
 
+FULL_SIDEBAR           = NO
+HTML_COLORSTYLE        = LIGHT
 HTML_COLORSTYLE_HUE    = 104
 HTML_COLORSTYLE_SAT    = 77
 HTML_COLORSTYLE_GAMMA  = 112
@@ -252,7 +251,7 @@ GENERATE_ECLIPSEHELP   = NO
 ECLIPSE_DOC_ID         = org.doxygen.Project
 DISABLE_INDEX          = NO
 
-GENERATE_TREEVIEW      = NO
+GENERATE_TREEVIEW      = YES
 
 ENUM_VALUES_PER_LINE   = 4
 TREEVIEW_WIDTH         = 250
