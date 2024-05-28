@@ -42,7 +42,7 @@ def generate_doxyfile():
         placeholder = f'@{var}@'
         doxyfile_content = doxyfile_content.replace(placeholder, value)
 
-    doxyfile_content.replace("@BASE_PATH@", os.path.abspath(os.getcwd()))
+    doxyfile_content = doxyfile_content.replace("@BASE_PATH@", os.path.abspath(os.getcwd()))
 
     # Write the generated Doxyfile
     with open('Doxyfile', 'w') as doxyfile:
